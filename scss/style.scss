@@ -2,6 +2,8 @@
 //sass variables
 //varible for minimum scree size for desktop stylings to take place
 $desktop: 550px;
+$bgColor: #D9D9D9;
+$cardColor: #F3F3F3;
 
 //sass partial imports
 @import "media-query-mixins" ;
@@ -12,7 +14,7 @@ $desktop: 550px;
 .grid{
 	margin-left: 1rem ;
 	margin-right: 1rem ;
-	background-color: lightgrey;
+	background-color: $bgColor;
 	@include desktop {
 		margin-left: 3rem;
 		margin-right: 3rem; 
@@ -43,7 +45,7 @@ $desktop: 550px;
 
 .card{
 	flex: 1 1 400px;
-	background-color: white;
+	background-color: $cardColor ;
 	display: flex;
 	 justify-content: center;
 	margin: .5rem;

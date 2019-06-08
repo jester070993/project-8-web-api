@@ -18,7 +18,7 @@
 .grid {
   margin-left: 1rem;
   margin-right: 1rem;
-  background-color: lightgrey;
+  background-color: #D9D9D9;
 }
 @media screen and (min-width: 550px) {
   .grid {
@@ -51,7 +51,7 @@
 
 .card {
   flex: 1 1 400px;
-  background-color: white;
+  background-color: #F3F3F3;
   display: flex;
   justify-content: center;
   margin: 0.5rem;
