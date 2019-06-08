@@ -1,6 +1,56 @@
-h1{
-	color: red;
-	margin-left: 100px;
-	margin-top: 100px;
-	border: 10px solid black;
+
+//sass variables
+//varible for minimum scree size for desktop stylings to take place
+$desktop: 550px;
+
+//sass partial imports
+@import "media-query-mixins" ;
+@import "card-styling" ;
+@import "card-overlay" ;
+
+//styling for base
+.grid{
+	margin-left: 1rem ;
+	margin-right: 1rem ;
+	background-color: lightgrey;
+	@include desktop {
+		margin-left: 3rem;
+		margin-right: 3rem; 
+	}
 }
+
+.heading{
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+}
+
+.title{
+	margin: 0;
+	padding-right: 2rem;
+}
+
+.moto{
+	font-style: italic;
+	text-decoration: underline;
+	font-size: 1.33rem;
+	letter-spacing: .1rem;
+}
+
+.bold{
+	font-weight: 900;
+}
+
+.card{
+	flex: 1 1 300px;
+	background-color: white;
+	display: flex;
+	 justify-content: center;
+	margin: .5rem;
+}
+
+.box{
+	display: flex;
+	flex-wrap: wrap;
+}
+

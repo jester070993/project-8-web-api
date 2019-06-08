@@ -1,8 +1,65 @@
-h1 {
+.card-list {
+  list-style: none;
   color: red;
-  margin-left: 100px;
-  margin-top: 100px;
-  border: 10px solid black;
+}
+
+#card1 {
+  display: flex;
+  align-items: center;
+}
+
+.radius {
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid white;
+  box-shadow: 1px 1px 10px grey;
+}
+
+.grid {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: lightgrey;
+}
+@media screen and (min-width: 550px) {
+  .grid {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.heading {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.moto {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 1.33rem;
+  letter-spacing: 0.1rem;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.card {
+  flex: 1 1 300px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */
