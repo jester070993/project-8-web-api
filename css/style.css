@@ -121,7 +121,6 @@ html {
 .box {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,13 +5,13 @@ const cards  = document.getElementsByClassName("card");
 const modal = document.getElementById("modalBox")
 let modalContent = document.getElementById("greyBox")
 
-fetch("https://randomuser.me/api/?results=12")
+fetch("https://randomuser.me/api/?results=20")
 .then(data => {
 	return data.json();
 })
 .then(reponse => {
 
-	for (let i = 0 ; i < 12 ; i++){
+	for (let i = 0 ; i < 20 ; i++){
 		let img = document.createElement("img")
 			users[i].appendChild(img)
 			img.classList.add("radius")
