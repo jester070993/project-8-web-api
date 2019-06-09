@@ -1,4 +1,17 @@
 //styling for when card is clicked, overlay
+#modalBox{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: rgba(0,0,0, .7);
+	z-index: 1;
+	display: none;
+}
 
-
-
+#greyBox{
+	width: 25%;
+	background-color: white;
+}

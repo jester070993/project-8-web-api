@@ -3,7 +3,12 @@
 //varible for minimum scree size for desktop stylings to take place
 $desktop: 550px;
 $bgColor: #D9D9D9;
+$fontGrey: #626262;
 $cardColor: #F3F3F3;
+$fontStack: 'Muli', sans-serif;
+$heading: 'Pacifico', cursive;
+;
+
 
 //sass partial imports
 @import "media-query-mixins" ;
@@ -11,20 +16,35 @@ $cardColor: #F3F3F3;
 @import "card-overlay" ;
 
 //styling for base
+
+html{
+	height: 100vh;
+	background-color: $cardColor;
+
+}
 .grid{
 	margin-left: 1rem ;
 	margin-right: 1rem ;
-	background-color: $bgColor;
 	@include desktop {
-		margin-left: 3rem;
-		margin-right: 3rem; 
+		padding-left: 3rem;
+		padding-right: 3rem; 
 	}
 }
+
+
+#number{
+	color: #4E4E4E;
+	font-style: italic;
+}
+
 
 .heading{
 	margin-top: 0;
 	display: flex;
 	align-items: center;
+	font-family: $heading;
+	color: $fontGrey;
+	text-shadow: 3px 3px 3px #7D7D7D;
 }
 
 .title{
@@ -37,22 +57,38 @@ $cardColor: #F3F3F3;
 	text-decoration: underline;
 	font-size: 1.33rem;
 	letter-spacing: .1rem;
+	font-family: $fontStack;
 }
 
 .bold{
-	font-weight: 900;
+	font-family: $heading;
+
 }
 
 .card{
-	flex: 1 1 400px;
+	flex: 1 1 350px;
 	background-color: $cardColor ;
 	display: flex;
 	 justify-content: center;
-	margin: .5rem;
+	margin: 1rem;
+	border: 2px solid #B7B7B7;
+	border-radius: .5rem;
+	padding: 2rem;
+	transition: all .2s;
+	font-family: $fontStack;
+	&:hover{
+		transform: rotate(5deg) scale(1.1);
+		border: 1px solid #6C6C6C;
+		&  .radius {
+			transform: scale(1.5);
+			border-color: #E3FBFA;
+		}
+	}
 }
+
 
 .box{
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
 }
-
