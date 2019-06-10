@@ -1,9 +1,17 @@
 
 
-const users = document.getElementsByClassName("user");//returns array of html dom elements where info will be place
+const users = document.getElementsByClassName("user");//returns array-like object HTML collection of html dom elements where info will be place
 const cards  = document.getElementsByClassName("card");
-const modal = document.getElementById("modalBox")
-let modalContent = document.getElementById("greyBox")
+
+//modal variables
+const modal = document.getElementById("modalBox");
+let modalContent = document.getElementById("greyBox");
+//overlay variables
+const nameOverlay = document.getElementsByClassName("nameOverlay")[0];
+const emailOverlay = document.getElementsByClassName("emailOverlay")[0];
+const overlayInfo = document.getElementsByClassName("overlayInfo")[0];
+
+console.log(nameOverlay, emailOverlay)
 
 fetch("https://randomuser.me/api/?results=20")
 .then(data => {
@@ -46,15 +54,23 @@ Array.from(cards).forEach(card => { //"cards" returns an HTML nodelist collectio
 	card.addEventListener("click", function(e){
 		console.log(e.target)
 		modal.style.display = "flex";
+			overlayInfo.innerHTML = this.innerHTML;
+			console.log(this.firstChild)
+
+			console.log(this.tagName)
+		// this.className = "cardLayout"
 		modal.addEventListener("click", function(e){
 			console.log(e.target.id)
 			if(e.target.tagName == "SPAN" || e.target.id == "modalBox"){
 				modal.style.display = "none";
+				this.className = "user"
 			}
 		})
 
 	})
 })
+
+
 
 
 

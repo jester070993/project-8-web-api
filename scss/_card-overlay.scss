@@ -1,17 +1,64 @@
-//styling for when card is clicked, overlay
-#modalBox{
-	position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	background-color: rgba(0,0,0, .7);
-	z-index: 1;
-	display: none;
-}
+// #modalBox{
+// 	position: absolute;
+//     width: 100%;
+// 	height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// 	background-color: rgba(0,0,0, .7);
+// 	z-index: 1;
+// 	display: none;
+// 	overflow: auto;
+// }
 
 #greyBox{
 	width: 25%;
 	background-color: white;
+	
+}
+
+#modalBox{
+	position: fixed;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+ 	background-color: rgba(0,0,0, .7);
+ 	top: 0;
+ 	overflow: auto;
+
+
+}
+
+// #greyBox{
+// 	width: 300px;
+// 	background-color: green;
+// 	height: 500px;
+
+// }
+
+.icon{
+	color: $fontGrey;
+	margin-top: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+.iconContainer{
+		width: 100%;
+			text-align: right;
+
+
+}
+
+
+.overlayInfo{
+	list-style: none;
+}
+
+.cardLayout{
+	display: flex;
+	flex-direction: column;
+	color: yellow;
 }
