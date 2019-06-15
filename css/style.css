@@ -72,6 +72,15 @@
   color: yellow;
 }
 
+.givenLayout {
+  flex-direction: column;
+}
+
+.phone {
+  margin-top: 0.5rem;
+  display: none;
+}
+
 html {
   height: 100vh;
   background-color: #F3F3F3;

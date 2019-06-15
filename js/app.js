@@ -11,6 +11,9 @@ const nameOverlay = document.getElementsByClassName("nameOverlay")[0];
 const emailOverlay = document.getElementsByClassName("emailOverlay")[0];
 const overlayInfo = document.getElementsByClassName("overlayInfo")[0];
 
+let greyBox = document.querySelector("#greyBox")
+console.log(greyBox)
+
 console.log(nameOverlay, emailOverlay)
 
 fetch("https://randomuser.me/api/?results=20")
@@ -38,7 +41,16 @@ fetch("https://randomuser.me/api/?results=20")
 							<li class="name"> ${firstName} ${lastName} </li>
 							<li class="email">  ${reponse.results[i].email} </li>							
 							<li class="city">  ${location} </li>	
+							
 		`;
+		// if (modal.style.display == "none"){
+			// console.log(reponse.results[i].phone)
+			// if (modal.style.display){
+			// 	console.log(reponse.results[i].phone)
+
+			// }
+	// <li class="phone">  ${reponse.results[i].phone} </li>
+		
 	}
 		//fucntion demostation inside promise, newuser function exmaple, logs the specific data to the console
 		console.log(newuser(reponse.results[1].email + "you bitch!"))
@@ -52,18 +64,23 @@ newuser("hello!!!!");
 
 Array.from(cards).forEach(card => { //"cards" returns an HTML nodelist collection, which is ARRAY-LIKE, but actaully an object - neeto use .form() to turn it into array
 	card.addEventListener("click", function(e){
-		console.log(e.target)
+		// console.log(e.target)
 		modal.style.display = "flex";
-			overlayInfo.innerHTML = this.innerHTML;
-			console.log(this.firstChild)
+			greyBox.innerHTML += this.innerHTML;
+			// console.log(this.className)
+			console.log(greyBox.firstElementChild)
 
-			console.log(this.tagName)
-		// this.className = "cardLayout"
+			greyBox.firstElementChild.classList.add = "givenLayout"
+
+
+			// this.style.display = "inline"
+			// greyBox.lastElementChild	// this.className = "cardLayout"
 		modal.addEventListener("click", function(e){
-			console.log(e.target.id)
+			// console.log(e.target.id)
 			if(e.target.tagName == "SPAN" || e.target.id == "modalBox"){
 				modal.style.display = "none";
-				this.className = "user"
+				greyBox.innerHTML = "" ;
+				// this.className = "user"
 			}
 		})
 
