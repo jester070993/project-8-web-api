@@ -2,6 +2,7 @@
   list-style: none;
   color: #818181;
   font-size: 1.1rem;
+  padding-left: 2rem;
 }
 
 .user {
@@ -12,10 +13,11 @@
 
 .radius {
   border-radius: 50%;
-  margin-right: 2rem;
   border: 2px solid white;
   box-shadow: 1px 1px 10px grey;
   transition: transform 0.2s;
+  max-width: 52px;
+  margin: 0 auto;
 }
 
 .name {
@@ -23,19 +25,33 @@
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  display: block;
+  padding-top: 1rem;
 }
 
 .city {
   margin-top: 0.5rem;
+  display: block;
 }
 
 .email {
   font-size: 1.3rem;
+  display: block;
+}
+
+.givenLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #greyBox {
   width: 25%;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #C0C0C0;
+  border-radius: 15%;
 }
 
 #modalBox {
@@ -69,16 +85,16 @@
 .cardLayout {
   display: flex;
   flex-direction: column;
-  color: yellow;
-}
-
-.givenLayout {
-  flex-direction: column;
 }
 
 .phone {
   margin-top: 0.5rem;
   display: none;
+}
+
+.extraInfo {
+  display: none;
+  list-style: none;
 }
 
 html {

@@ -14,7 +14,10 @@
 #greyBox{
 	width: 25%;
 	background-color: white;
-	
+	display: flex;
+    justify-content: center;
+    border: 2px solid #C0C0C0;
+	border-radius: 15%;
 }
 
 #modalBox{
@@ -60,16 +63,20 @@
 .cardLayout{
 	display: flex;
 	flex-direction: column;
-	color: yellow;
+	
 }
 
 
-.givenLayout{
-	// display: flex; 
-	flex-direction: column;
-}
+
 
 .phone{
 	margin-top: .5rem;
 	display: none;
+}
+
+
+
+.extraInfo{
+	display: none;
+	list-style: none;
 }

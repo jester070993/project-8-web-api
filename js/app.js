@@ -12,6 +12,9 @@ const emailOverlay = document.getElementsByClassName("emailOverlay")[0];
 const overlayInfo = document.getElementsByClassName("overlayInfo")[0];
 
 let greyBox = document.querySelector("#greyBox")
+
+			const extraInfo = document.querySelector(".extraInfo")
+
 console.log(greyBox)
 
 console.log(nameOverlay, emailOverlay)
@@ -37,12 +40,22 @@ fetch("https://randomuser.me/api/?results=20")
 
 		let locationFirstChar = location.charAt(0).toUpperCase();
 			location = locationFirstChar + location.slice(1);
-		users[i].innerHTML +=  `<ul class='card-list'> 
+
+		users[i].innerHTML +=  `<ul class='card-list '> 
 							<li class="name"> ${firstName} ${lastName} </li>
 							<li class="email">  ${reponse.results[i].email} </li>							
 							<li class="city">  ${location} </li>	
-							
+							</ul>
+							<hr>
+							<ul class="extraInfo">
+								<li> ${reponse.results[i].phone}</li>
+								<li> ${reponse.results[i].phone}</li>
+								<li> ${reponse.results[i].phone}</li>
+
+							</ul>					
 		`;
+
+
 		// if (modal.style.display == "none"){
 			// console.log(reponse.results[i].phone)
 			// if (modal.style.display){
@@ -68,9 +81,13 @@ Array.from(cards).forEach(card => { //"cards" returns an HTML nodelist collectio
 		modal.style.display = "flex";
 			greyBox.innerHTML += this.innerHTML;
 			// console.log(this.className)
-			console.log(greyBox.firstElementChild)
+			console.log(greyBox.firstElementChild.className); 
 
-			greyBox.firstElementChild.classList.add = "givenLayout"
+			greyBox.firstElementChild.className = "" ;
+			greyBox.firstElementChild.className = "givenLayout";
+			// greyBox.firstElementChild.classList.add = "givenLayout"
+
+			greyBox.lastElementChild.lastElementChild.style.display  = "block" ;
 
 
 			// this.style.display = "inline"

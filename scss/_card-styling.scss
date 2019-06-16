@@ -3,6 +3,8 @@
 	list-style: none;
 	color: #818181;
 	font-size: 1.1rem;
+	// display: block;
+	padding-left: 2rem;
 }
 
 .user{
@@ -13,10 +15,12 @@
 
 .radius{
 	border-radius: 50%;	
-	margin-right: 2rem;
 	border: 2px solid white;
 	box-shadow: 1px 1px 10px grey;
 	transition: transform .2s;
+	max-width: 52px;
+		margin: 0 auto;
+
 
 }
 
@@ -25,12 +29,27 @@
 	font-size: 1.4rem;
 	font-weight: bold;
 	margin-bottom: 1.5rem;
+	display: block;
+	padding-top: 1rem;
+
+
 }
 
 .city{
 	margin-top: .5rem;
+	display: block;
 }
 
 .email{
 	font-size: 1.3rem;
+	display: block;
 }
+
+.givenLayout{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+
