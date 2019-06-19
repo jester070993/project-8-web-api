@@ -3,6 +3,7 @@
   color: #818181;
   font-size: 1.1rem;
   padding-left: 2rem;
+  font-family: "Muli", sans-serif;
 }
 
 .user {
@@ -30,8 +31,9 @@
 }
 
 .city {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   display: block;
+  padding-bottom: 1rem;
 }
 
 .email {
@@ -46,11 +48,11 @@
 }
 
 #greyBox {
-  width: 25%;
+  width: 30%;
   background-color: white;
   display: flex;
   justify-content: center;
-  border: 2px solid #C0C0C0;
+  border: 2px solid black;
   border-radius: 15%;
 }
 
@@ -72,10 +74,14 @@
   padding-right: 5px;
   cursor: pointer;
 }
+.icon:hover {
+  color: violet;
+}
 
 .iconContainer {
   width: 100%;
-  text-align: right;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .overlayInfo {
@@ -95,6 +101,20 @@
 .extraInfo {
   display: none;
   list-style: none;
+  font-size: 1.2rem;
+  padding: 0 1.5rem;
+  padding-bottom: 1.5rem;
+  color: #626262;
+  font-family: "Muli", sans-serif;
+}
+.extraInfo > li {
+  padding-top: 1rem;
+}
+
+hr {
+  width: 95%;
+  color: #626262;
+  margin: 0 auto;
 }
 
 html {
