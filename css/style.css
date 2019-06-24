@@ -48,12 +48,17 @@
 }
 
 #greyBox {
-  width: 30%;
+  width: 50%;
   background-color: white;
   display: flex;
   justify-content: center;
   border: 2px solid black;
   border-radius: 15%;
+}
+@media screen and (min-width: 600px) {
+  #greyBox {
+    width: 30%;
+  }
 }
 
 #modalBox {
@@ -73,9 +78,10 @@
   margin-top: 5px;
   padding-right: 5px;
   cursor: pointer;
+  font-size: 2rem;
 }
 .icon:hover {
-  color: violet;
+  color: rgba(216, 191, 216, 0.9);
 }
 
 .iconContainer {
@@ -126,7 +132,7 @@ html {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 600px) {
   .grid {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -140,11 +146,14 @@ html {
 
 .heading {
   margin-top: 0;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   font-family: "Pacifico", cursive;
   color: #626262;
-  text-shadow: 3px 3px 3px #7D7D7D;
+  text-shadow: 3px 3px 1px thistle;
+  border-bottom: 1px solid rgba(216, 191, 216, 0.3);
+  padding-bottom: 1rem;
 }
 
 .title {

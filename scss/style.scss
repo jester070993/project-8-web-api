@@ -1,7 +1,7 @@
 
 //sass variables
 //varible for minimum scree size for desktop stylings to take place
-$desktop: 550px;
+$desktop: 600px;
 $bgColor: #D9D9D9;
 $fontGrey: #626262;
 $cardColor: #F3F3F3;
@@ -40,11 +40,16 @@ html{
 
 .heading{
 	margin-top: 0;
+	margin-bottom: 2rem;
 	display: flex;
 	align-items: center;
 	font-family: $heading;
 	color: $fontGrey;
-	text-shadow: 3px 3px 3px #7D7D7D;
+	text-shadow: 3px 3px 1px rgb(216,191,216);
+	border-bottom: 1px solid rgb(216,191,216, .3);
+	padding-bottom: 1rem;
+
+
 }
 
 .title{

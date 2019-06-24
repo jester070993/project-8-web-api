@@ -12,12 +12,15 @@
 // }
 
 #greyBox{
-	width: 30%;
+	width: 50%;
 	background-color: white;
 	display: flex;
     justify-content: center;
     border: 2px solid black;
 	border-radius: 15%;
+	@include desktop{
+		width: 30%;
+	}
 }
 
 #modalBox{
@@ -46,8 +49,9 @@
 	margin-top: 5px;
 	padding-right: 5px;
 	cursor: pointer;
+	font-size: 2rem;
 	&:hover{
-		color: violet;
+		color: rgb(216,191,216, .9)
 	}
 }
 
