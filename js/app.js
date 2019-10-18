@@ -39,7 +39,8 @@ fetch("https://randomuser.me/api/?results=20")
 		let dob = reponse.results[i].dob.date.slice(0, 10);
 			//capitalizes every word for street data 
 		let street = reponse.results[i].location.street;
-		street = street.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+		console.log(street.number)
+		// street = street.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 			//capitalizes every word for city
 		let city = reponse.results[i].location.city;
 			   city = city.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
@@ -52,7 +53,7 @@ fetch("https://randomuser.me/api/?results=20")
 							<hr>
 							<ul class="extraInfo">
 								<li> ${reponse.results[i].phone}</li>
-								<li> ${street} ${city} ${location}, ${reponse.results[i].location.postcode} </li>
+								<li> ${street.number} ${city} ${location}, ${reponse.results[i].location.postcode} </li>
 								<li> DOB: ${dob}</li>
 								<div class="iconContainer"><span class="fas fa-times-circle icon"></span></div>
 							</ul>`;
@@ -68,8 +69,9 @@ Array.from(cards).forEach(card => { //"cards" returns an HTML nodelist collectio
 			greyBox.firstElementChild.className = "" ;
 			greyBox.firstElementChild.className = "givenLayout";
 			greyBox.lastElementChild.lastElementChild.style.display  = "block";
+
+			//if outside of box or x is clicked,  display set back to none
 		modal.addEventListener("click", function(e){
-			// console.log(e.target.id)
 			if(e.target.tagName == "SPAN" || e.target.id == "modalBox"){
 				modal.style.display = "none";
 				greyBox.innerHTML = "" ;
